@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-background-color 0xccd9ff42?>
+
+<BorderPane maxHeight="500.0" maxWidth="690.0" minHeight="470.0" minWidth="600.0" prefHeight="470.0" prefWidth="700.0" scaleZ="1.0" snapToPixel="false" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.StudentCtr">
+    <center>
+        <VBox alignment="TOP_CENTER" fillWidth="true" prefHeight="514.0" prefWidth="270.0001007152532" spacing="30.0">
+            <children>
+                <Label text="Students Menu" textAlignment="LEFT">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                    <textFill>
+                        <Color blue="0.557" green="0.475" red="0.443" fx:id="x1" />
+                    </textFill>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Label>
+                <GridPane alignment="CENTER" gridLinesVisible="false" prefHeight="270.0" prefWidth="258.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="127.0" text="ID" textAlignment="CENTER" textFill="$x1" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="127.0" text="First Name" textAlignment="CENTER" textFill="$x1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="127.0" text="Last Name" textAlignment="CENTER" textFill="$x1" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="127.0" text="Group" textAlignment="CENTER" textFill="$x1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="127.0" text="Email" textAlignment="CENTER" textFill="$x1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="127.0" text="Teacher" textAlignment="CENTER" textFill="$x1" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <TextField fx:id="textID" prefHeight="34.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+                        <TextField fx:id="textFirstName" prefHeight="34.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="textLastName" prefHeight="34.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="textGroup" prefHeight="34.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="textEmail" prefHeight="34.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                        <TextField fx:id="textTeacher" prefHeight="34.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="85.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="33.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="90.0" />
+                    </columnConstraints>
+                    <padding>
+                        <Insets right="10.0" />
+                    </padding>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </GridPane>
+                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" VBox.margin="$x2" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="TOP_CENTER" fillHeight="true" prefHeight="27.0" prefWidth="221.0" spacing="5.0">
+                            <children>
+                                <Button alignment="TOP_CENTER" contentDisplay="LEFT" mnemonicParsing="false" onMouseClicked="#addStudent" prefWidth="86.0" text="Add" textOverrun="ELLIPSIS" underline="false" wrapText="false" HBox.hgrow="ALWAYS" />
+                                <Button alignment="TOP_CENTER" mnemonicParsing="false" onMouseClicked="#deleteStudent" prefWidth="86.0" text="Delete" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="55.999900000002526" prefWidth="221.0" spacing="5.0">
+                            <children>
+                                <Button alignment="TOP_CENTER" mnemonicParsing="false" onMouseClicked="#updateStudent" prefWidth="86.0" text="Update" />
+                                <Button alignment="TOP_CENTER" cancelButton="true" mnemonicParsing="false" onMouseClicked="#onCancel" prefWidth="86.0" text="Cancel" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" fx:id="x2" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="10.0" top="40.0" />
+            </padding>
+        </VBox>
+    </center>
+    <left>
+        <TableView fx:id="table" blendMode="MULTIPLY" cache="false" disable="false" editable="false" focusTraversable="false" onMouseClicked="#getDataFromTable" prefHeight="514.0" prefWidth="440.9999000000025" tableMenuButtonVisible="false" visible="true" BorderPane.alignment="TOP_CENTER">
+            <columns>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="41.0" resizable="false" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="81.0" resizable="false" text="First Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" resizable="false" text="Last Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="65.0" resizable="false" text="Group">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="group" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="5000.0" minWidth="0.0" prefWidth="67.0" resizable="false" text="Email">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="98.0" resizable="false" text="Teacher">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="guidingTeacher" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <effect>
+                <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.30952380952380953">
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <javafx.scene.effect.Light.Distant color="#aabeff" />
+                    </light>
+                </Lighting>
+            </effect>
+        </TableView>
+    </left>
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+</BorderPane>
